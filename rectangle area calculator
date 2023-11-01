@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Area Calculator</title>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+    <p>Enter the length and width of the rectangle:</p>
+    Length: <input type="text" id="lengthInput"><br>
+    Width: <input type="text" id="widthInput"><br>
+    <button onclick="calculateArea()">Calculate Area</button>
+    <p>Area: <span id="result"></span></p>
+
+    <script>
+        // JavaScript function to calculate the area of a rectangle
+        function calculateArea() {
+            var length = parseFloat(document.getElementById("lengthInput").value);
+            var width = parseFloat(document.getElementById("widthInput").value);
+            var area = length * width;
+            document.getElementById("result").textContent = isNaN(area) ? "Invalid input" : "Area: " + area;
+        }
+    </script>
+</body>
+</html>
